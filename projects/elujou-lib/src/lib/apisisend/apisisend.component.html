@@ -1,0 +1,86 @@
+
+<div class="tekst">
+  Siia paluks registrikoodi:
+</div>
+<br>
+
+<input type="text" [(ngModel)]="value" class="registrikood" placeholder="registrikood">
+<br>
+
+<div class="tekst">
+  Sisestatud registrikood: {{ value }}
+  <br><br>
+  Väljaminev string: {{ valjaParing() }}
+</div>
+<!--{{value}}-->
+<br>
+<div class="tekst">
+    <br>
+  Väljaminev minustring: {{ minaValja() }}
+</div>
+
+
+<br><br>
+<div class="nupp">
+ 
+  <button (click)="onclick()">
+      
+  {{ReadMore?"Saada päring":"Tagasi"}}
+  
+  
+  </button>
+  </div>
+  <br>
+  <br>
+  <ng-container *ngIf="visible">
+  
+  <api></api>
+    <!--lahteturn-component></lahteturn-component-->
+  <!----lahtealumine-component></lahtealumine-component--->
+  <!--div class="tekstselgit2">
+    
+    <br>   
+    
+    <lahteinfo-component></lahteinfo-component>    
+      
+  </div-->
+  
+  
+  </ng-container>
+
+  <div class="tekst">
+  Kui ühendus saadakse, siis consoolile logitakse "Apist sisse tulev:", sealt on näha, mis ja kuidas tuleb, seda oleks siis vaja näha.
+  <br>
+  <br>
+  Kui ühendust ei saada, siis näitab consool GET päringu viga, ka seda, kuhu saadeti.
+  </div>
+
+  <br>
+  <div class="tekst">
+      <br>
+    Kuva model2y2: {{ saaKatte() }}
+  </div>
+
+  <br>
+  <div class="tekst">
+      <br>
+    Kuva EMTAK: {{ saaEmtak() }}
+  </div>
+
+  <br>
+  <div class="tekst">
+      <br>
+    Kuva aasta: {{ saaAasta() }}
+  </div>
+
+  <br>
+  <div class="tekst">
+      <br>
+    Kuva rohkem: {{ saaRohkem() }}
+  </div>
+
+  <br>
+  <div class="tekst">
+      <br>
+    Kuva viga: {{ saaViga() }}
+  </div>
